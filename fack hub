@@ -103,7 +103,7 @@ local aTab = Window:CreateTab("b1c1", "align-justify")
 
 local Section = aTab:CreateSection("Part1")
 
-local Button = aTab:CreateButton({
+-- [[local Button = aTab:CreateButton({
    Name = "Auto get iped and off Music",
    Callback = function()
 local character = game.Players.LocalPlayer.Character
@@ -275,6 +275,18 @@ for i, v in pairs(workspace.Lantern:GetChildren()) do
 end
 end)
    end,
+})]]
+
+local Button = aTab:CreateButton({
+   Name = "Auto win",
+   Callback = function()
+local player = game.Players.LocalPlayer.Character.HumanoidRootPart
+local prom = workspace:GetChildren()[87].ProximityPrompt
+prom.Enabled = true
+player.CFrame = CFrame.new(387.151825, 3.25000381, -131.789978, 0.99911505, 3.65336628e-09, 0.0420602821, -3.5167107e-09, 1, -3.32303185e-09, -0.0420602821, 3.17217741e-09, 0.99911505)
+game.Workspace.CurrentCamera.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0, 0, 1), game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+fireproximityprompt(prom)
+   end,
 })
 
 local Section = aTab:CreateSection("ESP")
@@ -354,7 +366,7 @@ local cTab = Window:CreateTab("b1c1-1.1", "align-justify")
 
 local Section = cTab:CreateSection("Part1.1")
 
-local Button = cTab:CreateButton({
+-- [[local Button = cTab:CreateButton({
    Name = "ป้อมยาม",
    Callback = function()
       game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(385.316498, 3.25000381, -124.489433, -0.0523394383, -1.65481495e-09, -0.998629332, -9.4930833e-08, 1, 3.31836003e-09, 0.998629332, 9.49743963e-08, -0.0523394383)
@@ -414,7 +426,7 @@ local Button = cTab:CreateButton({
    Callback = function()
       game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(465.497162, 5.20862246, -85.7364502, 0.997563839, -9.94695739e-08, 0.0697594881, 9.99541498e-08, 1, -3.4557357e-09, -0.0697594881, 1.04200675e-08, 0.997563839)
    end,
-})
+})]]
 
 local Section = cTab:CreateSection("ESP")
 
