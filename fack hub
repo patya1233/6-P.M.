@@ -283,11 +283,14 @@ local Button = aTab:CreateButton({
    Name = "Auto win",
    Callback = function()
 local player = game.Players.LocalPlayer.Character.HumanoidRootPart
-local prom = workspace:GetChildren()[87].ProximityPrompt
-prom.Enabled = true
-player.CFrame = CFrame.new(387.151825, 3.25000381, -131.789978, 0.99911505, 3.65336628e-09, 0.0420602821, -3.5167107e-09, 1, -3.32303185e-09, -0.0420602821, 3.17217741e-09, 0.99911505)
-game.Workspace.CurrentCamera.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0, 0, 1), game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
-fireproximityprompt(prom)
+for i, v in ipairs(workspace:GetDescendants()) do
+	if v:IsA("ProximityPrompt") then
+		v.Enabled = true
+		player.CFrame = CFrame.new(387.151825, 3.25000381, -131.789978, 0.99911505, 3.65336628e-09, 0.0420602821, -3.5167107e-09, 1, -3.32303185e-09, -0.0420602821, 3.17217741e-09, 0.99911505)
+		game.Workspace.CurrentCamera.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0, 0, 1), game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+		wait(1)
+		fireproximityprompt(v)
+	end
    end,
 })
 
