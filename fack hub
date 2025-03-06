@@ -366,9 +366,9 @@ local Toggle = aTab:CreateToggle({
 
 local cTab = Window:CreateTab("b1c1-1.1", "align-justify")
 
+--[[
 local Section = cTab:CreateSection("Part1.1")
 
---[[
 local Button = cTab:CreateButton({
    Name = "ป้อมยาม",
    Callback = function()
