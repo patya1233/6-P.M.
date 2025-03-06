@@ -55,12 +55,16 @@ local Toggle = bTab:CreateToggle({
    Callback = function(Value)
 	if Value then
 		local lighting = game:GetService("Lighting")
-		lighting.Brightness = 10
+		lighting.Brightness = 1
+		lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255)
+		lighting.Ambient = Color3.fromRGB(255, 255, 255)
 		lighting.GlobalShadows = false
 		lighting.Atmosphere:Destroy()
 	else
 		local lighting = game:GetService("Lighting")
 		lighting.Brightness = 0
+		lighting.OutdoorAmbient = Color3.fromRGB(0, 0, 0)
+		lighting.Ambient = Color3.fromRGB(0, 0, 0)
 		lighting.GlobalShadows = true
 		local Atmosphere = Instance.new("Atmosphere")
 		Atmosphere.Parent = lighting
