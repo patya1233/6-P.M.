@@ -103,7 +103,7 @@ local aTab = Window:CreateTab("b1c1", "align-justify")
 
 local Section = aTab:CreateSection("Part1")
 
--- [[
+--[[
 local Button = aTab:CreateButton({
    Name = "Auto get iped and off Music",
    Callback = function()
@@ -363,11 +363,12 @@ local Toggle = aTab:CreateToggle({
       end
    end,
 })
--- [[
+
 local cTab = Window:CreateTab("b1c1-1.1", "align-justify")
 
 local Section = cTab:CreateSection("Part1.1")
 
+--[[
 local Button = cTab:CreateButton({
    Name = "ป้อมยาม",
    Callback = function()
