@@ -103,7 +103,6 @@ local aTab = Window:CreateTab("b1c1", "align-justify")
 
 local Section = aTab:CreateSection("Part1")
 
---[[
 local Button = aTab:CreateButton({
    Name = "Auto get iped and off Music",
    Callback = function()
@@ -277,7 +276,6 @@ end
 end)
    end,
 })
-]]
 
 local Button = aTab:CreateButton({
    Name = "Auto win",
