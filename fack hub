@@ -290,9 +290,9 @@ for i, v in ipairs(workspace:GetDescendants()) do
 		game.Workspace.CurrentCamera.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0, 0, 1), game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
 		wait(1)
 		fireproximityprompt(v)
+		end
 	end
-    end
-end,
+   end,
 })
 
 local Section = aTab:CreateSection("ESP")
