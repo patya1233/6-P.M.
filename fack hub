@@ -291,7 +291,8 @@ for i, v in ipairs(workspace:GetDescendants()) do
 		wait(1)
 		fireproximityprompt(v)
 	end
-   end,
+    end
+end,
 })
 
 local Section = aTab:CreateSection("ESP")
